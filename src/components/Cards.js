@@ -11,13 +11,13 @@ function Cards() {
 
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
+              src='/Autonom/images/img-3.jpg'
               text='Our Research Publication'
               label='Research Paper'
               path='https://www.medrxiv.org/content/10.1101/2020.10.09.20165431v2'
             />
             <CardItem
-              src='images/img-2.jpg'
+              src='/Autonom/images/img-2.jpg'
               text='Our App'
               label='Third Eye'
               path='/'

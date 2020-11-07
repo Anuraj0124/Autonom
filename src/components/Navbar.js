@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src='images/Pratik-logo.png' className="logo"/>
+            <img src='/Autonom/images/Pratik-logo.png' className="logo"/>
             {/*<i class='fab fa-typo3' />*/}
 
           </Link>

@@ -10,8 +10,8 @@ function HeroSection() {
       {/*<h1>PRATIK</h1>
             <p>(Pandemic Regulation
             and Tracking Intelligent Kit)</p>*/}
-            <img src='images/logo.gif' className="home_logo"/>
-            <img src='images/Pratik-logo 1 overlay.png' className="home_logo1"/>
+            <img src='/Autonom/images/logo.gif' className="home_logo"/>
+            <img src='/Autonom/images/Pratik-logo 1 overlay.png' className="home_logo1"/>
             {/*<video src='videos/Pratik-logo.mov' type="mov"  autoPlay loop muted/>*/}
 
       {/*<ul class="text hidden">

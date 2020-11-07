@@ -52,7 +52,7 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               
-               <img src='images/Pratik-logo.png' className="logo"/>
+               <img src='/Autonom/images/Pratik-logo.png' className="logo"/>
             </Link>
           </div>
           <small class='website-rights'>AUTONOM © 2020</small>

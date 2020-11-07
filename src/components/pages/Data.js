@@ -15,7 +15,7 @@ export const homeObjOne = {
     achieved by novel approaches using machine learning on 
     the individual’s healthcare and demographic data.`,
   imgStart: '',
-  img: 'images/img-10.jpg',
+  img: '/Autonom/images/img-10.jpg',
   alt: 'Credit Card'
 };
 
@@ -39,7 +39,7 @@ export const homeObjTwo = {
   QR code dynamically and website that gives the risk status 
   according to the varying individual risk factor.`,
   imgStart: '',
-  img: 'images/img-home.jpg',
+  img: '/Autonom/images/img-home.jpg',
   alt: 'Vault'
 };
 
@@ -61,7 +61,7 @@ export const homeObjThree = {
     candidates for priority vaccination besides the
      healthcare workers`,
   imgStart: 'start',
-  img: 'images/img-11.jpg',
+  img: '/Autonom/images/img-11.jpg',
   alt: 'Vault'
 };
 
