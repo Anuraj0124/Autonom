@@ -43,7 +43,7 @@ function Footer() {
             </div>
             <div class='footer-link-items'>
             <h2>Mail</h2>
-            <a href="mailto:ncov2019@gov.in">Covid Helpline Mail</a>
+            <h4><a href="mailto:ncov2019@gov.in">Covid Helpline Mail</a></h4>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/form'
+                to='/userform'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >

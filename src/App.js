@@ -1,9 +1,11 @@
+
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from './components/pages/Form';
+import UserForm  from './components/UserForm';
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/form' component={Form} />
+          <Route path='/userform' component={UserForm} />
         </Switch>
       </Router>
     </>
@@ -20,3 +22,17 @@ function App() {
 }
 
 export default App;
+
+{/*import React from 'react';
+import { UserForm } from './components/UserForm';
+
+const App = () => {
+  return (
+    <div className="App">
+      <UserForm />
+    </div>
+  );
+}
+
+export default App;
+*/}
