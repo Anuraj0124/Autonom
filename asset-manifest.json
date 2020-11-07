@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Autonom/static/css/main.ad678dd9.chunk.css",
-    "main.js": "/Autonom/static/js/main.241aef15.chunk.js",
-    "main.js.map": "/Autonom/static/js/main.241aef15.chunk.js.map",
+    "main.js": "/Autonom/static/js/main.034303be.chunk.js",
+    "main.js.map": "/Autonom/static/js/main.034303be.chunk.js.map",
     "runtime-main.js": "/Autonom/static/js/runtime-main.08bc1ebc.js",
     "runtime-main.js.map": "/Autonom/static/js/runtime-main.08bc1ebc.js.map",
-    "static/js/2.29e15791.chunk.js": "/Autonom/static/js/2.29e15791.chunk.js",
-    "static/js/2.29e15791.chunk.js.map": "/Autonom/static/js/2.29e15791.chunk.js.map",
+    "static/js/2.0828f067.chunk.js": "/Autonom/static/js/2.0828f067.chunk.js",
+    "static/js/2.0828f067.chunk.js.map": "/Autonom/static/js/2.0828f067.chunk.js.map",
     "index.html": "/Autonom/index.html",
     "static/css/main.ad678dd9.chunk.css.map": "/Autonom/static/css/main.ad678dd9.chunk.css.map",
-    "static/js/2.29e15791.chunk.js.LICENSE.txt": "/Autonom/static/js/2.29e15791.chunk.js.LICENSE.txt"
+    "static/js/2.0828f067.chunk.js.LICENSE.txt": "/Autonom/static/js/2.0828f067.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.08bc1ebc.js",
-    "static/js/2.29e15791.chunk.js",
+    "static/js/2.0828f067.chunk.js",
     "static/css/main.ad678dd9.chunk.css",
-    "static/js/main.241aef15.chunk.js"
+    "static/js/main.034303be.chunk.js"
   ]
 }
