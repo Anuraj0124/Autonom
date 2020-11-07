@@ -13,34 +13,34 @@ import './Form.css';
 export class UserForm extends Component {
   state = {
     step:0,
-    result:"",
-    peopleId:"", 
-    region:"", 
-    gender:"",
-    designation:"",
-    fname:"",
-    married:"",
-    children:"",
-    occupation:"",
-    mode_transport:"",
+    result:0,
+    peopleId:0, 
+    region:0, 
+    gender:0,
+    designation:0,
+    fname:0,
+    married:0,
+    children:0,
+    occupation:0,
+    mode_transport:0,
     cases:8,
     deaths:1,
-    comorbidity:"",
-    age:"",
-    comaScore:"",
-    pulmonaryScore:"",
-    cardiologicalPressure:"",
-    diuresis:"",
-    platelets:"",
-    hbb:"",
-    ddimer:"",
-    heartRate:"",
-    hdlCholesterol:"",
-    charlsonIndex:"",
-    bloodGlucose:"",
-    insurance:"",
-    salary:"",
-    ftmonth:""  
+    comorbidity:0,
+    age:0,
+    comaScore:0,
+    pulmonaryScore:0,
+    cardiologicalPressure:0,
+    diuresis:0,
+    platelets:0,
+    hbb:0,
+    ddimer:0,
+    heartRate:0,
+    hdlCholesterol:0,
+    charlsonIndex:0,
+    bloodGlucose:0,
+    insurance:0,
+    salary:0,
+    ftmonth:0  
   };
 
   // Proceed to next step
@@ -62,7 +62,35 @@ export class UserForm extends Component {
   initStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step - step
+      step:0,
+    result:0,
+    peopleId:0, 
+    region:0, 
+    gender:0,
+    designation:0,
+    fname:0,
+    married:0,
+    children:0,
+    occupation:0,
+    mode_transport:0,
+    cases:8,
+    deaths:1,
+    comorbidity:0,
+    age:0,
+    comaScore:0,
+    pulmonaryScore:0,
+    cardiologicalPressure:0,
+    diuresis:0,
+    platelets:0,
+    hbb:0,
+    ddimer:0,
+    heartRate:0,
+    hdlCholesterol:0,
+    charlsonIndex:0,
+    bloodGlucose:0,
+    insurance:0,
+    salary:0,
+    ftmonth:0  
     });
   };
   // Handle fields change
@@ -97,8 +125,7 @@ export class UserForm extends Component {
       hdlCholesterol,
       charlsonIndex,
       bloodGlucose,
-      insurance,
-      salary,
+      
       ftmonth
 
     } = this.state;
@@ -133,8 +160,7 @@ export class UserForm extends Component {
       hdlCholesterol,
       charlsonIndex,
       bloodGlucose,
-      insurance,
-      salary,
+      
       ftmonth
     };
 
@@ -166,7 +192,7 @@ export class UserForm extends Component {
         parseInt(ftmonth),
       ],
     };
-    console.log(data)
+    console.log(gender);
     sendData(data);
   };
     const sendData = (data) => {
@@ -204,6 +230,7 @@ export class UserForm extends Component {
             handleChange={this.handleChange}
             values={values}
           />
+
         );
       case 2:
         return (
@@ -220,6 +247,7 @@ export class UserForm extends Component {
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             //validateData={this.validateData}//
+            handleChange={this.handleChange}
             values={values}
           />
         );

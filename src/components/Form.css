@@ -24,10 +24,13 @@ body{
 	color:grey;
 }
 .btn1{
-	margin-bottom: 15px;
-	padding-right: 15px;
-	padding-left: 15px;
-	flex: 1;
-	max-width: 50%;
-	flex-basis: 50%;
+	position:absolute;
+	left:40%;
+	width: 50%;
+}
+.btn2{
+	position:relative;
+	margin-bottom: 30px;
+	left:50%;
+	width: 50%;
 }

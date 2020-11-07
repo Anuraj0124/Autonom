@@ -28,6 +28,7 @@ export class Success extends Component {
   
 
   render() {
+    
     return (
       <Container>
         <div className="terms"> 
@@ -38,7 +39,7 @@ export class Success extends Component {
           <br/> 
           The resulting risk factor for you is :
           <br/>
-          /************************Output*****************************/
+          {this.props.result}/************************Output*****************************/
           <br/>
           Stay well and Stay Healthy.
           <br/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
+import { Button1 } from './Button';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -61,13 +61,13 @@ function HeroSection() {
             </ul>*/}
 
       <div className='hero-btns'>
-        <Button
+        <Button1
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
           GET STARTED  <i className='far fa-play-circle' />
-        </Button>
+        </Button1>
         {/*<Button
                   className='btns'
                   buttonStyle='btn--primary'

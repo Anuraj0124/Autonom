@@ -38,7 +38,7 @@ export class FormUserDetails extends Component {
             <br />
             The services and information provided by the Application are not designed to diagnose whether you have contracted 
             COVID-19 or to predict whether you will contract COVID-19. The Application is designed to use your survey responses to 
-            assess your risk factor in contracting and vulnerability to COVID-19.
+            assess your risk factor in contracting and susceptibility to COVID-19.
             <br/>
             Responses to this survey may be useful in identifying concentrations of vulnerable individuals, mobilizing and allocating resources to 
             assist those individuals, and furthering research related to the COVID-19 pandemic.
