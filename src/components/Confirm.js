@@ -31,30 +31,12 @@ export class Confirm extends Component {
     this.props.prevStep();
   };
 
-
-
   parseData = (data) => {
     console.log("Values", data);
     Axios.post("https://samhar-user-end.herokuapp.com/predict", data)
       .then((res) => {
         console.log("Hey this is your result", res.data.output);
         this.props.handleResult(res.data.output);
-        {
-          /*switch (res.data.output) {
-        this.props.handleResult(res.data.output);
-                  case "1":
-                    this.setState({ [result]: "You are in Medium Risk"});
-                    break;
-                  case "2":
-                    this.setState({ [result]: "You are in High Risk"});
-                    break;
-                  case "0":
-                    this.setState({ [result]: "You are in low risk"});
-                    break;
-                  default:
-                    this.setState({ [result]: "You are in low riks"});
-                }*/
-        }
         this.continue();
       })
       .catch((err) => {
@@ -151,7 +133,9 @@ export class Confirm extends Component {
               <Button
                 color="primary"
                 variant="contained"
-                onClick= {console.log("clicked"),this.parseData(data)}
+                onClick={() => {
+                  this.parseData(data);
+                }}
               >
                 Confirm and Submit
               </Button>
