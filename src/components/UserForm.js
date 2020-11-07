@@ -6,6 +6,7 @@ import TermsCondition from './TermsCondition';
 import Confirm from './Confirm';
 import Success from './Success';
 import Axios from "axios";
+import error from "./error"
 import './Form.css';
 
 
@@ -45,6 +46,7 @@ export class UserForm extends Component {
 
   // Proceed to next step
   nextStep = () => {
+    console.log("step");
     const { step } = this.state;
     this.setState({
       step: step + 1
@@ -92,6 +94,14 @@ export class UserForm extends Component {
     salary:0,
     ftmonth:0  
     });
+  };
+  handleResult = (output) =>{
+    console.log("user result",output)
+    this.setState({ ['result']: output });
+    // const { step } = this.state;
+    // this.setState({
+    //   step: step + 1
+    // });
   };
   // Handle fields change
   handleChange = input => e => {
@@ -163,58 +173,58 @@ export class UserForm extends Component {
       
       ftmonth
     };
-
-    const validateData = () => {
-    let data = {
-      inputs: [
-        parseInt(0),
-        parseInt(gender),
-        parseInt(0),
-        parseInt(married),
-        parseInt(children),
-        parseInt(occupation),
-        parseInt(mode_transport),
-        parseInt(cases),
-        parseInt(deaths),
-        parseInt(comorbidity),
-        parseInt(age),
-        parseInt(comaScore),
-        parseInt(pulmonaryScore),
-        parseInt(cardiologicalPressure),
-        parseInt(diuresis),
-        parseInt(platelets),
-        parseInt(hbb),
-        parseInt(ddimer),
-        parseInt(heartRate),
-        parseInt(hdlCholesterol),
-        parseInt(charlsonIndex),
-        parseInt(bloodGlucose),
-        parseInt(ftmonth),
-      ],
-    };
-    console.log(gender);
-    sendData(data);
-  };
-    const sendData = (data) => {
-    Axios.post("https://samhar-user-end.herokuapp.com/predict", data).then(
-      (res) => {
-        console.log(res.data.output);
-        switch (res.data.output) {
-          case "1":
-            this.setState({ [result]: "You are in Medium Risk"});
-            break;
-          case "2":
-            this.setState({ [result]: "You are in High Risk"});
-            break;
-          case "0":
-            this.setState({ [result]: "You are in low risk"});
-            break;
-          default:
-            this.setState({ [result]: "You are in low riks"});
-        }
-      }
-    );
-  };
+    const res1=0;
+    {/*const validateData = () => {
+        let data = {
+          inputs: [
+            parseInt(0),
+            parseInt(gender),
+            parseInt(0),
+            parseInt(married),
+            parseInt(children),
+            parseInt(occupation),
+            parseInt(mode_transport),
+            parseInt(cases),
+            parseInt(deaths),
+            parseInt(comorbidity),
+            parseInt(age),
+            parseInt(comaScore),
+            parseInt(pulmonaryScore),
+            parseInt(cardiologicalPressure),
+            parseInt(diuresis),
+            parseInt(platelets),
+            parseInt(hbb),
+            parseInt(ddimer),
+            parseInt(heartRate),
+            parseInt(hdlCholesterol),
+            parseInt(charlsonIndex),
+            parseInt(bloodGlucose),
+            parseInt(ftmonth),
+          ],
+        };
+        console.log(gender);
+        sendData(data);
+      };
+        const sendData = (data) => {
+        Axios.post("https://samhar-user-end.herokuapp.com/predict", data).then(
+          (res) => {
+            console.log(res.data.output);
+            switch (res.data.output) {
+              case "1":
+                this.setState({ [result]: "You are in Medium Risk"});
+                break;
+              case "2":
+                this.setState({ [result]: "You are in High Risk"});
+                break;
+              case "0":
+                this.setState({ [result]: "You are in low risk"});
+                break;
+              default:
+                this.setState({ [result]: "You are in low riks"});
+            }
+          }
+        );
+      };*/}
     switch (step) {
       case 0:
         return(
@@ -247,14 +257,16 @@ export class UserForm extends Component {
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             //validateData={this.validateData}//
-            handleChange={this.handleChange}
+            handleResult={this.handleResult}
             values={values}
+            res1={res1}
           />
         );
       case 4:
         return (
           <Success 
             initStep={this.initStep}
+            values={values}
           />
         );
       

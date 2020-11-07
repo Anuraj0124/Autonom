@@ -17,7 +17,7 @@ import './Form.css';
 
 
 export class FormPersonalDetails extends Component {
-  continue = e => {
+  continue1 = e => {
     e.preventDefault();
     this.props.nextStep();
   };
@@ -255,7 +255,7 @@ export class FormPersonalDetails extends Component {
               <Button
                 color="primary"
                 variant="contained"
-                onClick={this.continue}
+                onClick={this.continue1}
               >
                 Continue
               </Button>

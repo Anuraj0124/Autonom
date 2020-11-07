@@ -20,7 +20,7 @@ import './Form.css';
 const greenTheme = createMuiTheme({ palette: { primary: green} })
 
 export class Success extends Component {
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
     this.props.initStep();
   };
@@ -28,10 +28,43 @@ export class Success extends Component {
   
 
   render() {
-    
+
+    const {
+      values: {
+        result,
+        peopleId,
+        region,
+        gender,
+        designation,
+        fname,
+        married,
+        children,
+        occupation,
+        mode_transport,
+        cases,
+        deaths,
+        comorbidity,
+        age,
+        comaScore,
+        pulmonaryScore,
+        cardiologicalPressure,
+        diuresis,
+        platelets,
+        hbb,
+        ddimer,
+        heartRate,
+        hdlCholesterol,
+        charlsonIndex,
+        bloodGlucose,
+        insurance,
+        salary,
+        ftmonth,
+      },
+    } = this.props;
     return (
       <Container>
         <div className="terms"> 
+          {console.log("hey in sucess",{result})}
           <br/> 
           Your survey responses do not include any risk factors currently established by the CDC as creating an elevated risk for serious illness from COVID-19. 
           <br/> 
@@ -39,7 +72,7 @@ export class Success extends Component {
           <br/> 
           The resulting risk factor for you is :
           <br/>
-          {this.props.result}/************************Output*****************************/
+          {/*this.props.result*/}/************************Output*****************************/
           <br/>
           Stay well and Stay Healthy.
           <br/>
