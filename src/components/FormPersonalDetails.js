@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import validateInfo from './error.js';
 import {
   TextField,
   Button,
@@ -29,6 +30,8 @@ export class FormPersonalDetails extends Component {
 
   render() {
     const { values, handleChange } = this.props;
+    const  errors = validateInfo(values);
+
     return (
       <Container  className="form_input">
           
@@ -62,6 +65,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('age')}
               type="number" inputProps={{ min: 1, max: 120, step: 1}}
               defaultValue={values.age==0? "" : values.age}
+              helperText={!errors.age ? '(Required | Cannot be Negative | 1 - 120 )': '' }
+              error={!errors.age}   
               fullWidth
             />
             <br />
@@ -74,6 +79,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('comaScore')}
               type="number" inputProps={{ min: 1, max: 15, step: 1}}
               defaultValue={values.comaScore==0? "" : values.comaScore}
+              helperText={!errors.comaScore ? ' (Required | Cannot be Negative | 1 - 15)': '' }
+              error={!errors.comaScore} 
               margin="normal"
               fullWidth
             />
@@ -124,6 +131,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('diuresis')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.diuresis==0? "" : values.diuresis}
+              helperText={!errors.diuresis ? 'Diuresis Score incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.diuresis} 
               margin="normal"
               fullWidth
             />
@@ -135,6 +144,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('platelets')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.platelets==0? ""  : values.platelets}
+              helperText={!errors.platelets ?  'Platelets Score incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.platelets} 
               margin="normal"
               fullWidth
             />
@@ -145,6 +156,8 @@ export class FormPersonalDetails extends Component {
               label="Hepatic Blood bilirubin (µmol/L)"
               onChange={handleChange('hbb')}
               defaultValue={values.hbb==0? "" : values.hbb}
+              helperText={! errors.hbb ? 'HBB Score incorrect (Required | Cannot be Negative)': '' }
+              error={! errors.hbb}   
               type="number" inputProps={{ min: 0}}
               margin="normal"
               fullWidth
@@ -157,6 +170,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('ddimer')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.ddimer==0? "" : values.ddimer}
+              helperText={!errors.ddimer ? 'D-dimer Score incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.ddimer} 
               margin="normal"
               fullWidth
             />
@@ -168,6 +183,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('heartRate')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.heartRate==0? "" : values.heartRate}
+              helperText={!errors.heartRate ? 'Heart Rate incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.heartRate} 
               margin="normal"
               fullWidth
             />
@@ -179,6 +196,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('hdlCholesterol')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.hdlCholesterol==0? "" : values.hdlCholesterol}
+              helperText={ !errors.hdlCholesterol ? 'HDL Cholestrol Level incorrect (Required | Cannot be Negative)': '' }
+              error={ !errors.hdlCholesterol } 
               margin="normal"
               fullWidth
             />
@@ -189,6 +208,8 @@ export class FormPersonalDetails extends Component {
               label="Charlson Index"
               onChange={handleChange('charlsonIndex')}
               defaultValue={values.charlsonIndex==0? "" : values.charlsonIndex}
+              helperText={!errors.charlsonIndex ? 'Charlson Index incorrect (Required | Cannot be Negative | 0 - 40)': '' }
+              error={!errors.charlsonIndex}  
               type="number" inputProps={{ min: 0, max: 40, step: 1}}
               margin="normal"
               fullWidth
@@ -202,6 +223,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('bloodGlucose')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.bloodGlucose==0? "" : values.bloodGlucose}
+              helperText={!errors.bloodGlucose ? 'Blood Glucose Level incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.bloodGlucose}  
               margin="normal"
               fullWidth
             />
@@ -236,6 +259,8 @@ export class FormPersonalDetails extends Component {
               onChange={handleChange('ftmonth')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.ftmonth==0? "" : values.ftmonth}
+              helperText={!errors.ftmonth  ? 'Foriegn trips count incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.ftmonth } 
               margin="normal"
               fullWidth
             />

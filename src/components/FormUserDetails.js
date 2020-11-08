@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import validateInfo from './error.js';
 import {
   TextField,
   Button,
@@ -19,6 +20,7 @@ import './Form.css';
 export class FormUserDetails extends Component {
   continue = e => {
     e.preventDefault();
+
     this.props.nextStep();
   };
   back = e => {
@@ -34,6 +36,7 @@ export class FormUserDetails extends Component {
   };
   render() {
     const { values, handleChange } = this.props;
+    const  errors = validateInfo(values);
     return (
       <Container className="form_input">
             <div className="terms"> 
@@ -45,7 +48,10 @@ export class FormUserDetails extends Component {
               placeholder="Aadhaar is a 12-digit unique identity number that can be obtained voluntarily by residents or passport holders of India, based on their biometric and demographic data."
               label="Aadhaar Number"
               onChange={handleChange('peopleId')}
+              type="number" 
               defaultValue={values.peopleId==0? "" : values.peopleId }
+              helperText={errors.peopleId ? '' : '( Required | Cannot be negative | Should be a 12 digit ID)'}
+              error={!errors.peopleId}
               margin="normal"
               fullWidth
             />
@@ -125,6 +131,8 @@ export class FormUserDetails extends Component {
               type="number" inputProps={{ min: 0, max: 10, step: 1}}
               onChange={handleChange('children')}
               defaultValue={values.children==0? "" : values.children}
+              helperText={!errors.children ? 'Children Number incorrect (Required | Cannot be Negative)': '' }
+              error={!errors.children}
               margin="normal"
               fullWidth
             />
