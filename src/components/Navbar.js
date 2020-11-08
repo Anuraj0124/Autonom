@@ -48,7 +48,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Form
+                Get Started
               </Link>
             </li>
           </ul>
