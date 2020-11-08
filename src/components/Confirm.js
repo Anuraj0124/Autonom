@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+  import React, { Component } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
@@ -14,12 +14,23 @@ import {
   Select,
   MenuItem,
   InputBase,
+  LinearProgress
 } from "@material-ui/core";
 import "./Form.css";
 
 const greenTheme = createMuiTheme({ palette: { primary: green } });
 
 export class Confirm extends Component {
+  state={
+    isLoading:false,
+    isButton:true,
+
+  };
+  handleLoad = () =>  {
+    this.setState({ ['isLoading']: true });
+    this.setState({ ['isButton']: false});
+
+  };
   continue = () => {
     // console.log("hey");
     // e.preventDefault();
@@ -32,9 +43,11 @@ export class Confirm extends Component {
   };
 
   parseData = (data) => {
+    this.handleLoad();
     console.log("Values", data);
     Axios.post("https://samhar-user-end.herokuapp.com/predict", data)
       .then((res) => {
+
         console.log("Hey this is your result", res.data.output);
         this.props.handleResult(res.data.output);
         this.continue();
@@ -45,6 +58,7 @@ export class Confirm extends Component {
   };
 
   render() {
+    const {isLoading,isButton}=this.state;
     const {
       values: {
         result,
@@ -124,23 +138,26 @@ export class Confirm extends Component {
           submission and we will take over from there.
           <br /> <br /> <br />
           <div className="btn1">
-            <Button color="secondary" variant="contained" onClick={this.back}>
+           {isButton &&  <Button color="secondary" variant="contained" onClick={this.back}>
               Back
-            </Button>
+            </Button>}
           </div>
           <div className="btn2">
             <ThemeProvider theme={greenTheme}>
-              <Button
+              {isButton && <Button
                 color="primary"
                 variant="contained"
                 onClick={() => {
-                  this.parseData(data);
-                }}
+                  
+                  this.parseData(data)}
+                }
               >
                 Confirm and Submit
-              </Button>
+              </Button>}
             </ThemeProvider>
           </div>
+          {isLoading && <LinearProgress />}
+          <br />
         </div>
       </Container>
     );
