@@ -131,7 +131,7 @@ export class FormPersonalDetails extends Component {
             <br />
             <TextField
               placeholder="The platelet count is a test that determines the number of platelets in your sample of blood, that are essential for normal blood clotting."
-              label="Haematological Platelets 10/L"
+              label="Haematological Platelets 10^9 /L"
               onChange={handleChange('platelets')}
               type="number" inputProps={{ min: 0}}
               defaultValue={values.platelets==0? ""  : values.platelets}
