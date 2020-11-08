@@ -31,10 +31,10 @@ export class Success extends Component {
         return "You are in Medium Risk";
         break;
       case "1":
-        return "You are in High Risk";
+        return "You are in low Risk";
         break;
       case "0":
-        return "You are in low Risk";
+        return "You are in High Risk";
         break;
       default:
         return "You are in low Risk.";
@@ -48,10 +48,10 @@ export class Success extends Component {
         return "yellow";
         break;
       case "1":
-        return "red";
+        return "green";
         break;
       case "0":
-        return "green";
+        return "red";
         break;
       default:
         return "green";
