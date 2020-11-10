@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import validateInfo from './error.js';
 import {

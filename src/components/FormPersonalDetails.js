@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import validateInfo from './error.js';
 import {
@@ -52,6 +51,7 @@ export class FormPersonalDetails extends Component {
               fullWidth
             >
             <option aria-label="None" value="" className="placeholder_item">The simultaneous presence of two or more diseases or medical conditions in a patient. (Hypertension / Diabetes / Coronary heart disease)</option>
+              <option value={3}>None</option>
               <option value={0}>Hypertension</option>
               <option value={1}>Diabetes</option>
               <option value={2}>Coronary Heart Disease</option>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AppBar from "@material-ui/core/AppBar";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import { List, ListItem, ListItemText } from "@material-ui/core/";
@@ -20,11 +19,14 @@ import "./Form.css";
 const greenTheme = createMuiTheme({ palette: { primary: green } });
 
 export class Success extends Component {
-  continue = (e) => {
+  fill = (e) => {
     e.preventDefault();
     this.props.initStep();
   };
-
+  continue = (e) => {
+    e.preventDefault();
+    this.props.nextStep();
+  };
   getResult = (result) => {
     switch (result) {
       case "2":
@@ -42,7 +44,6 @@ export class Success extends Component {
   };
 
   getResultCsss = (result) => {
-    console.log("triggered", result);
     switch (result) {
       case "2":
         return "yellow";
@@ -94,7 +95,6 @@ export class Success extends Component {
     return (
       <Container>
         <div className="terms">
-          {console.log("hey in sucess", { result })}
           <br />
           Your survey responses do not include any risk factors currently
           established by the CDC as creating an elevated risk for serious
@@ -116,11 +116,18 @@ export class Success extends Component {
           <br />
           Click the button to fill the form again.
           <br />
-          <ThemeProvider theme={greenTheme}>
-            <Button color="primary" variant="contained" onClick={this.continue}>
-              Fill Another Form
-            </Button>
-          </ThemeProvider>
+          <div className="btn1">
+            <ThemeProvider theme={greenTheme}>
+              <Button color="primary" variant="contained" onClick={this.fill}>
+                Fill Another Form
+              </Button>
+            </ThemeProvider>
+          </div>
+          <div className="btn2">
+              <Button color="primary" variant="contained" onClick={this.continue}>
+                Checkout How It Works!!
+              </Button>
+          </div>
         </div>
       </Container>
     );

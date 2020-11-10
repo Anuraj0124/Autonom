@@ -16,7 +16,7 @@ export const homeObjOne = {
     the individual’s healthcare and demographic data.`,
   imgStart: '',
   img: '/Autonom/images/img-10.jpg',
-  alt: 'Credit Card'
+  alt: 'Mission'
 };
 
 export const homeObjTwo = {
@@ -40,7 +40,7 @@ export const homeObjTwo = {
   according to the varying individual risk factor.`,
   imgStart: '',
   img: '/Autonom/images/img-home.jpg',
-  alt: 'Vault'
+  alt: 'Novelty'
 };
 
 export const homeObjThree = {
@@ -62,9 +62,7 @@ export const homeObjThree = {
      healthcare workers`,
   imgStart: 'start',
   img: '/Autonom/images/img-11.jpg',
-  alt: 'Vault'
+  alt: 'Use Cases'
 };
 
-export const homeObjFour = {
-  
-};
+

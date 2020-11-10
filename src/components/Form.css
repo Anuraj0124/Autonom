@@ -25,13 +25,13 @@ body{
 }
 .btn1{
 	position:absolute;
-	left:30%;
+	left:25%;
 	width: 50%;
 }
 .btn2{
 	position:relative;
 	margin-bottom: 30px;
-	margin-left:20px;
+	margin-left:30px;
 	left:50%;
 	width: 44%;
 }
@@ -47,3 +47,110 @@ body{
 .yellow{
 	color: orange;
 }
+
+
+
+/*************************** Image section ****************************/
+
+
+.visualize_img {
+	height: 50vh;
+	margin-top: 65px;
+  display:flex; 
+  vertical-align: center;
+  align-items:center; 
+  flex-flow:column nowrap;
+}
+
+
+
+.gallery {
+  perspective:700px;
+  width:50vw;
+  display:flex; justify-content:center; align-items:center; flex-flow:row wrap;
+}
+
+.visualize_img ul {
+  position:relative;
+  width:100px; height:100px;
+  margin:0.1em;
+  perspective-origin:center center;
+  transform-style:preserve-3d;
+  transform:rotateX(40deg);
+  transition:all 0.4s;
+}
+
+.visualize_img ul:hover {
+  transform:translateZ(100px) rotateX(20deg); z-index:999;
+}
+
+.visualize_img ul:hover li {
+  filter:grayscale(0);
+}
+
+.visualize_img li {
+  position:absolute; left:0; top:0;
+  backface-visibility:hidden;
+  width:100%; height:100%;
+  transition:transform 0.3s, filter 1s;
+  background:coral;
+  filter:grayscale(0.9);
+}
+/*
+Setup individual planes final poistion(by left top) and initial position(by transform)
+*/
+.visualize_img li:first-of-type {transform:none;}
+.visualize_img li:nth-of-type(2) {left:100%; transform-origin:left center; transform:rotateY(180deg);}
+.visualize_img li:nth-of-type(3) {top:100%; transform-origin:center top; transform:rotateX(-180deg);}
+.visualize_img li:nth-of-type(4) {left:-100%; transform-origin:right center; transform:rotateY(-180deg);}
+.visualize_img li:nth-of-type(5) {top:-100%; transform-origin:center bottom; transform:rotateX(180deg);}
+.visualize_img li:nth-of-type(6) {top:100%; left:100%; transform-origin:center top; transform:rotateX(-180deg);}
+.visualize_img li:nth-of-type(7) {top:100%; left:-100%; transform-origin:right center; transform:rotateY(-180deg);}
+.visualize_img li:nth-of-type(8) {top:-100%; left:-100%; transform-origin:center bottom; transform:rotateX(180deg);}
+.visualize_img li:nth-of-type(9) {top:-100%; left:100%; transform-origin:left center; transform:rotateY(180deg);}
+/*
+Setup transition-delay, for mouseout state 
+*/
+ li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4), li:nth-of-type(5) {transition-delay:0.03s;}
+ li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8), li:nth-of-type(9) {transition-delay:0s;}
+.visualize_img ul:hover :nth-of-type(2),.visualize_img ul:hover :nth-of-type(3),.visualize_img ul:hover :nth-of-type(4),.visualize_img ul:hover :nth-of-type(5) {transition-delay:0s}
+.visualize_img ul:hover :nth-of-type(6),.visualize_img ul:hover :nth-of-type(7),.visualize_img ul:hover :nth-of-type(8),.visualize_img ul:hover :nth-of-type(9) {transition-delay:0.2s}
+/*
+Setup planes final state
+*/
+.visualize_img ul:hover :nth-of-type(2),.visualize_img ul:hover :nth-of-type(4),.visualize_img ul:hover :nth-of-type(7),.visualize_img ul:hover :nth-of-type(9) {transform:rotateY(0);}
+.visualize_img ul:hover :nth-of-type(3), .visualize_img ul:hover :nth-of-type(5),.visualize_img ul:hover :nth-of-type(6), .visualize_img ul:hover :nth-of-type(8) {transform:rotateX(0);}
+/* 
+Set background position
+*/
+.visualize_img ul li {background-size:300% 300%;}
+ li:nth-of-type(1) {background-position:center top;}
+ li:nth-of-type(2) {background-position:right center;}
+ li:nth-of-type(3) {background-position:center bottom;}
+ li:nth-of-type(4) {background-position:left center;}
+ li:nth-of-type(5) {background-position:center top;}
+ li:nth-of-type(6) {background-position:right bottom;}
+ li:nth-of-type(7) {background-position:left bottom;}
+ li:nth-of-type(8) {background-position:left top;}
+ li:nth-of-type(9) {background-position:right top;}
+/*
+Set background image source
+*/
+.visualize_img ul:nth-of-type(1)  li { background-image:url('//Autonom/images/Graph 1.png');}
+.visualize_img ul:nth-of-type(1) { width:120px; height:80px; }
+.visualize_img ul:nth-of-type(2)  li { background-image:url('//Autonom/images/Graph 2.png');}
+.visualize_img ul:nth-of-type(2) { width:90px; height:130px; }
+.visualize_img ul:nth-of-type(3)  li { background-image:url('//Autonom/images/Graph 3.png');}
+.visualize_img ul:nth-of-type(3) { width:130px; height:90px; }
+.visualize_img ul:nth-of-type(4)  li { background-image:url(//picsum.photos/1200/800?image=1005);}
+.visualize_img ul:nth-of-type(4) { width:120px; height:80px; }
+.visualize_img ul:nth-of-type(5)  li { background-image:url(//picsum.photos/1042/1356?image=978);}
+.visualize_img ul:nth-of-type(5) { width:64px; height:84px; }
+.visualize_img ul:nth-of-type(6)  li { background-image:url(//picsum.photos/1000/666image=943);}
+.visualize_img ul:nth-of-type(6) { width:100px; height:66px; }
+/* 
+Hide debug label 
+*/
+.visualize_img li { text-indent:999px; overflow:hidden; }
+.visualize_img ul:hover li:nth-of-type(1) {background-position:center center;}
+
