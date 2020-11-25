@@ -27,6 +27,10 @@ export class Success extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
+  handlePlot = (val) => {
+    console.log(val);
+    // funcForPlot(val);
+  };
   getResult = (result) => {
     switch (result) {
       case "2":
@@ -181,6 +185,46 @@ export class Success extends Component {
               </div>
             </div>
           </div>
+          <br />
+          <InputLabel htmlFor="outlined-age-native-simple"><h2>Where you stand on the basis of: </h2></InputLabel>
+          <br />
+          <Select
+            className="visual-select"
+            native
+            onChange={
+              (e)=>this.handlePlot(e.target.value)
+            }
+          >
+
+            <option aria-label="None" value="" className="placeholder_item">Fields</option>
+            <option value={0}> Aadhaar Number</option>
+            <option value={1}> Gender  </option>
+            <option value={2}> Designation </option>
+            <option value={3}> Married </option>
+            <option value={4}> Children </option>
+            <option value={5}> Occupation </option>
+            <option value={6}> Mode of transport </option>
+            <option value={7}> Cases  </option>
+            <option value={8}> Deaths </option>
+            <option value={9}> Comorbidity  </option>
+            <option value={10}> Age  </option>
+            <option value={11}> Coma Score</option>
+            <option value={12}> Pulmonary Score</option>
+            <option value={13}> Cardiological Pressure</option>
+            <option value={14}>  Diuresis </option>
+            <option value={15}> Platelets  </option>
+            <option value={16}> HBB  </option>
+            <option value={17}> D-Dimer  </option>
+            <option value={18}> Heart Rate  </option>
+            <option value={19}> HDL Cholesterol  </option>
+            <option value={20}> Charlson Index </option>
+            <option value={21}>Blood Glucose  </option>
+            <option value={22}>Foreign Trips/ month  </option>
+          </Select>
+          <br />
+          <br />
+          <img  className='plot' src='/Autonom/images/Graph 3.png' alt=''  />
+
           <div className="btn1">
             <ThemeProvider theme={greenTheme}>
               <Button color="primary" variant="contained" onClick={this.back}>

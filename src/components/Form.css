@@ -157,3 +157,23 @@ body{
   margin-right:40px;
   color:#f7f8fa;
 }
+
+.plot{
+  width:30vw;
+  background-size: cover;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.8);
+  perspective: 200px;
+  display:flex;
+  align-items: center;
+  margin-left: 35vw;
+  margin-bottom: 50px;
+}
+
+h2{
+    text-align:center;
+}
+.visual-select{
+  width:60vw;
+  margin-left: 20vw;
+  margin-right: 20px
+}
