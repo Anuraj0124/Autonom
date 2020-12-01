@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route, HashRouter } from 'react-router-dom';
 import Form from './components/pages/Form';
 import UserForm  from './components/UserForm';
+import LiteForm from './components/LiteForm';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/liteform' component={LiteForm} />
           <Route path='/userform' component={UserForm} />
         </Switch>
       </HashRouter>

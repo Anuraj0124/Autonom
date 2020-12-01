@@ -46,7 +46,7 @@ export class Success extends Component {
   getResultCsss = (result) => {
     switch (result) {
       case "2":
-        return "yellow";
+        return "orange";
         break;
       case "1":
         return "green";

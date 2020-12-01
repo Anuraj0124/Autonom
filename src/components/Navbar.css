@@ -158,3 +158,10 @@
     transition: 250ms;
   }
 }
+
+.subscript{
+  font-size:0.75rem;
+  margin-bottom: 20px;
+  margin-left:5px;
+  color: red;
+}
