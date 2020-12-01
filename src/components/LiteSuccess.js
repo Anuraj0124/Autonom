@@ -30,14 +30,14 @@ export class Success extends Component {
 
   getResultCsss = (result) => {
     if(result=="High Risk")  return "red";
-    if(result=="Intermediate Risk")  return "orange";
+    if(result=="Intermideate Risk")  return "orange";
     if(result=="Slight")  return "yellow";
     if(result=="Normal")  return "green";
     
   };
   getResult = (result) => {
     if(result=="High Risk")  return "Highly Vulnerable";
-    if(result=="Intermedeate Risk")  return "Intermediately Vulnerable";
+    if(result=="Intermideate Risk")  return "Intermediately Vulnerable";
     if(result=="Slight")  return "Slightly Vulnerable";
     if(result=="Normal")  return "Normal";
     
