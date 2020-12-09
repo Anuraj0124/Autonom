@@ -42,7 +42,6 @@ export class Confirm extends Component {
 
   parseData = (data) => {
     this.handleLoad();
-    console.log("Values", data);
     Axios.post("http://14.139.180.154:5000/lite", data)
       .then((res) => {
 
@@ -131,8 +130,6 @@ export class Confirm extends Component {
               Back
             </Button>}
           </div>
-          {console.log(data)}
-          {console.log(values)}
 
           <div className="btn2">
             <ThemeProvider theme={greenTheme}>

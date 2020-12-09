@@ -16,7 +16,6 @@ import {
   InputBase,
 } from "@material-ui/core";
 import "./Form.css";
-const greenTheme = createMuiTheme({ palette: { primary: green } });
 
 export class Success extends Component {
   fill = (e) => {
@@ -226,11 +225,9 @@ export class Success extends Component {
           <img  className='plot' src='/Autonom/images/Graph 3.png' alt=''  />
 
           <div className="btn1">
-            <ThemeProvider theme={greenTheme}>
               <Button color="primary" variant="contained" onClick={this.back}>
                 Back
               </Button>
-            </ThemeProvider>
           </div>
           <div className="btn2">
               <Button color="primary" variant="contained" onClick={this.fill}>

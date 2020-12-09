@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core";
 import './Form.css';
 
-const greenTheme = createMuiTheme({ palette: { primary: green} })
+const greenTheme1 = createMuiTheme({ palette: { primary: green} })
 
 export class LiteMedicalDetails extends Component {
   continue1 = e => {
@@ -49,7 +49,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.diabetes ? "primary" :"secondary"}
+              color={values.diabetes ? "secondary" : ""}
               variant="contained"
               onClick={handleChange2('diabetes')}
             >
@@ -68,7 +68,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.copd ? "primary" :"secondary"}
+              color={values.copd ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('copd')}
             >
@@ -87,7 +87,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.asthma ? "primary" :"secondary"}
+              color={values.asthma ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('asthma')}
             >
@@ -106,7 +106,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.hypertension ? "primary" :"secondary"}
+              color={values.hypertension ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('hypertension')}
             >
@@ -125,7 +125,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.cystic_fibrosis ? "primary" :"secondary"}
+              color={values.cystic_fibrosis ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('cystic_fibrosis')}
             >
@@ -144,7 +144,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.heart_attack ? "primary" :"secondary"}
+              color={values.heart_attack ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('heart_attack')}
             >
@@ -163,7 +163,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.stroke ? "primary" :"secondary"}
+              color={values.stroke ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('stroke')}
             >
@@ -182,7 +182,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.heart_disease ? "primary" :"secondary"}
+              color={values.heart_disease ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('heart_disease')}
             >
@@ -201,7 +201,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.kidney_disease ? "primary" :"secondary"}
+              color={values.kidney_disease ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('kidney_disease')}
             >
@@ -220,7 +220,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.liver_disease ? "primary" :"secondary"}
+              color={values.liver_disease ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('liver_disease')}
             >
@@ -239,7 +239,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.cancer ? "primary" :"secondary"}
+              color={values.cancer ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('cancer')}
             >
@@ -258,7 +258,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.cell_anemia ? "primary" :"secondary"}
+              color={values.cell_anemia ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('cell_anemia')}
             >
@@ -277,7 +277,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.hiv ? "primary" :"secondary"}
+              color={values.hiv ? "secondary" :""}
               variant="contained"
               onClick={handleChange2('hiv')}
             >
@@ -296,7 +296,7 @@ export class LiteMedicalDetails extends Component {
             <br />
             <div className="lite-btn">
             <Button
-              color={values.none_of_them ? "primary" :"secondary"}
+              color={values.none_of_them ? "secondary" :""}
               variant="contained"
               onClick={()=>handleNone()}
             >

@@ -21,15 +21,18 @@ body{
 }
 .btn1{
 	position:absolute;
-	left:25%;
-	width: 50%;
+	margin-left:5vw;
+  left:10vw;
+	width: 40vw;
+  margin-right:5vw;
+
 }
 .btn2{
-	position:relative;
+	/*position:relative;*/
 	margin-bottom: 30px;
-	margin-left:30px;
-	left:50%;
-	width: 44%;
+	margin-right:5vw;
+	margin-left:55vw;
+	width: 40vw;
 }
 
 .green{
