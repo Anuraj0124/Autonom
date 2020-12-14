@@ -41,15 +41,15 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/liteform'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                PRATIK <span className="subscript">LITE</span>
-              </Link>
-            </li>
+            {/*<li className='nav-item'>
+                          <Link
+                            to='/liteform'
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                          >
+                            PRATIK <span className="subscript">LITE</span>
+                          </Link>
+                        </li>*/}
             <li className='nav-item'>
               <Link
                 to='/userform'
