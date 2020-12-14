@@ -16,7 +16,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          PRATIK <span className="subscript">LITE</span> <i className='far fa-play-circle' />
+          PRATIK {/*<span className="subscript">LITE</span>*/}<i className='far fa-play-circle' />
         </Button1>
       </div>
     </div>
